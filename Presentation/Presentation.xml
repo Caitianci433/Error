@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Presentation</name>
+    </assembly>
+    <members>
+        <member name="T:Presentation.Controllers.MainController">
+            <summary>
+            主控制器
+            </summary>
+        </member>
+        <member name="M:Presentation.Controllers.MainController.#ctor(Microsoft.Extensions.Logging.ILogger{Presentation.Controllers.MainController},MediatR.IMediator,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="logger"></param>
+            <param name="mediator"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Presentation.Controllers.MainController.GetAsync">
+            <summary>
+            Main-Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.MainController.Authenticate">
+            <summary>
+            验证与授权
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Presentation.Controllers.TestRedisController">
+            <summary>
+            Redis测试控制器
+            </summary>
+        </member>
+        <member name="M:Presentation.Controllers.TestRedisController.#ctor(Microsoft.Extensions.Caching.Distributed.IDistributedCache)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Presentation.Controllers.TestRedisController.TestGetAsync">
+            <summary>
+            Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.TestRedisController.TestPostAsync">
+            <summary>
+            Post
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
