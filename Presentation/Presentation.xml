@@ -4,6 +4,76 @@
         <name>Presentation</name>
     </assembly>
     <members>
+        <member name="T:Presentation.Configure.MyConfigurationExtension">
+            <summary>
+            MyConfigurationExtension
+            </summary>
+        </member>
+        <member name="M:Presentation.Configure.MyConfigurationExtension.UseMySwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            OpenApi
+            </summary>
+            <param name="app"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Configure.MyConfigurationExtension.UseIndex(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)">
+            <summary>
+            配置起始页
+            </summary>
+            <param name="app"></param>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Presentation.Configure.MyServiceExtension">
+            <summary>
+            MyServiceExtension
+            </summary>
+        </member>
+        <member name="M:Presentation.Configure.MyServiceExtension.AddMySwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            AddMySwagger
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Configure.MyServiceExtension.AddMyRedis(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            redis
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Configure.MyServiceExtension.AddMyMysql(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            mysql
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Configure.MyServiceExtension.AddRepository(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Repository
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Configure.MyServiceExtension.AddCORS(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Cors
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Configure.MyServiceExtension.AddJWT(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            JWT
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
         <member name="T:Presentation.Controllers.MainController">
             <summary>
             主控制器
