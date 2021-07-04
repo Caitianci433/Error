@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using UseCase.Attribute;
 
 namespace UseCase
 {
@@ -39,6 +40,7 @@ namespace UseCase
             _testRepository = testRepository;
         }
 
+        [Exception]
         public async Task<MainResponse> Handle(MainRequest request, CancellationToken cancellationToken)
         {
             var flag = await _testRepository.Test();

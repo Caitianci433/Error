@@ -34,6 +34,8 @@ namespace Presentation
             services.AddMediatR(Assembly.Load("UseCase"));
             //Swagger
             services.AddMySwagger();
+            //PieplineBehavior
+            services.AddPieplineBehavior();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

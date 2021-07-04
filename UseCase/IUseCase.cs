@@ -10,7 +10,7 @@ namespace UseCase
     /// <summary>
     /// 请求
     /// </summary>
-    interface URequest<TResponse> : IRequest<TResponse> where TResponse: UResponse
+    public interface URequest<TResponse> : IRequest<TResponse> where TResponse: UResponse
     {
 
     }
@@ -18,7 +18,7 @@ namespace UseCase
     /// <summary>
     /// 响应
     /// </summary>
-    interface UResponse
+    public interface UResponse
     {
         bool IsError { get; set; }
 
@@ -29,7 +29,7 @@ namespace UseCase
     /// <summary>
     /// UseCase Handler
     /// </summary>
-    interface IUseCaseHandler<TRequest, TResponse> : IRequestHandler<TRequest, TResponse> 
+    public interface IUseCaseHandler<TRequest, TResponse> : IRequestHandler<TRequest, TResponse> 
         where TRequest: URequest<TResponse>
         where TResponse:UResponse
     { 

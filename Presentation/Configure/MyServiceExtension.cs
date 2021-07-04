@@ -1,4 +1,5 @@
 ﻿using Infrastructure.DB;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -80,6 +81,27 @@ namespace Presentation.Configure
                 var repository = types.Where(o => o.GetInterface(iRepository.Name) != null).SingleOrDefault();
                 services.AddScoped(iRepository, repository);
             }
+            return services;
+        }
+
+        /// <summary>
+        /// PieplineBehavior
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddPieplineBehavior(this IServiceCollection services)
+        {
+            var types = Assembly.Load("UseCase").GetTypes();
+
+            var type = typeof(UseCase.Behavior.AbstractPipelineBehavior<,>);
+            var pieplineBehaviors = types.Where(o => o.BaseType?.Name== type.Name).ToList<Type>();
+
+            foreach (var pieplineBehavior in pieplineBehaviors)
+            {
+                services.AddScoped(typeof(IPipelineBehavior<,>), pieplineBehavior);
+            }
+            
+
             return services;
         }
 

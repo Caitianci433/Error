@@ -1,4 +1,5 @@
 ﻿using Infrastructure.DB;
+using Infrastructure.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace Infrastructure.Repositories
 {
     public interface ITestRepository : IRepository 
     {
-        Task<bool> Test();
+        Task<Image> Test();
     
     }
 
@@ -23,11 +24,14 @@ namespace Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public async Task<bool> Test()
+        public async Task<Image> Test()
         {
-            _dbContext.Posts.Add(new Post { BlogId=1, Content="test", PostId=1, Title="test"   });
-            _dbContext.SaveChanges();
-            return  await _dbContext.Database.CanConnectAsync();
+            var image = _dbContext.Image.Add(new Image { contentType="jpg", path= "2b8e7783c6ebd218.jpg" });
+            await _dbContext.SaveChangesAsync();
+
+            var ret = await _dbContext.Image.FirstOrDefaultAsync();
+
+            return ret;
         }
     }
 }

@@ -59,6 +59,13 @@
             <param name="services"></param>
             <returns></returns>
         </member>
+        <member name="M:Presentation.Configure.MyServiceExtension.AddPieplineBehavior(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            PieplineBehavior
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
         <member name="M:Presentation.Configure.MyServiceExtension.AddCORS(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Cors
@@ -72,6 +79,23 @@
             </summary>
             <param name="services"></param>
             <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Presentation.Controllers.File.ImageController">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="M:Presentation.Controllers.File.ImageController.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,MediatR.IMediator)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="webHostEnvironment"></param>
+        </member>
+        <member name="M:Presentation.Controllers.File.ImageController.GetImageAsync(System.Nullable{System.Int32})">
+            <summary>
+            图片
+            </summary>
             <returns></returns>
         </member>
         <member name="T:Presentation.Controllers.MainController">
