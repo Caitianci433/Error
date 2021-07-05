@@ -86,13 +86,19 @@
             图片
             </summary>
         </member>
-        <member name="M:Presentation.Controllers.File.ImageController.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,MediatR.IMediator)">
+        <member name="M:Presentation.Controllers.File.ImageController.#ctor(MediatR.IMediator)">
             <summary>
             构造函数
             </summary>
-            <param name="webHostEnvironment"></param>
+            <param name="mediator"></param>
         </member>
         <member name="M:Presentation.Controllers.File.ImageController.GetImageAsync(System.Nullable{System.Int32})">
+            <summary>
+            图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Presentation.Controllers.File.ImageController.PutImageAsync">
             <summary>
             图片
             </summary>

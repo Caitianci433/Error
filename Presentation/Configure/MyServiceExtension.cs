@@ -12,6 +12,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using UseCase.Attribute;
 
 namespace Presentation.Configure
 {
@@ -94,7 +95,8 @@ namespace Presentation.Configure
             var types = Assembly.Load("UseCase").GetTypes();
 
             var type = typeof(UseCase.Behavior.AbstractPipelineBehavior<,>);
-            var pieplineBehaviors = types.Where(o => o.BaseType?.Name== type.Name).ToList<Type>();
+            var pieplineBehaviors = types.Where(o => o.BaseType?.Name== type.Name)
+                .OrderBy(s=>s.GetCustomAttribute<OrderAttribute>().order).ToList<Type>();
 
             foreach (var pieplineBehavior in pieplineBehaviors)
             {
